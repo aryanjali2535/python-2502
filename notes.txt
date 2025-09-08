@@ -1,0 +1,24 @@
+8th Sep 2025
+->> todays cls we learnt about how to clone repo in vs code
+>> 1st creating github account
+in that create repo with readme file
+>> 2nd open vs code in that click on source control in that we can see clone repo and open repo
+we click on clone repo
+>> then next we give permission to github it will ask id and passward
+we see our repo click on that it will open(cloned)
+>> next come to vs code if u want to add file like txt or py we create by simply by clicking new file
+>> here we create txt file in that we give some information
+>> when its done completing editing file we see notification on source control(fork symbol)
+>> by clicking on that it will ask to commit 
+here we click + symbol where its in changes next write message like what is it to understand 
+then click on commit. after it will ask message and sync click on it 
+*before this go to git blash 
+>> open and type 
+-> git config --global user.name github_id(ours)
+-> git config --global user.email github_email(ours)
+>> when sync we click its ask again permission to git we have to give 
+>> then it will directly see this txt file in github where we created our repo
+>> *when u do refresh page u can see this file in repo
+if u wanted to delete the file also same process 
+go to source control it will ask message we give and click on commit 
+we see changes in git repo by refreshing the page
