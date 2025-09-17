@@ -1,4 +1,3 @@
-
 # Working With Variables
 
 # Assigning Data
