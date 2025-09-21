@@ -1,9 +1,52 @@
 #Enhanced Student Grade Tracker Solution
-'''student_id = input("Enter the student id : ")
-if student_id == 0:
-    print("zero not included")
-elif student_id.startswith("-") and student_id[1:].isdigit():
-    print("Enter +ve Numbers Only")
-else:
-    print("enter the numbers")
-print(student_id)'''
+print("="*50)
+print("         Enhanced Student Grade Tracker       ")
+print("="*50)
+
+#validate id 
+id_valid = False 
+while not id_valid :
+    student_id = input("Enter the student id :")
+    if student_id.startswith("-") and student_id[1].isdigit():
+        print("Please enter the positive number only")
+    elif student_id.isdigit():
+        student_id = int(student_id)
+        if student_id > 0:
+            id_valid = True
+        else:
+            print("Zero Not Allowed")
+    else:
+        print("Enter Numbers Only")
+
+#validate name
+name_valid = False
+while not name_valid:
+    student_name = input("Enter the student name:")
+    student_name = student_name.strip()
+    student_name = student_name.title()
+    if student_name.replace(" ", "").isalpha():
+        name_valid = True
+        if len(student_name) >= 3:
+            print(student_name)
+        else:
+            print("Invalid: Name must be at least 3 characters long.")
+    else:
+        print("Invalid: Name must contain alphabets (a-z, A-Z).")
+
+#System Generated ID
+print(f"EDIFY-STU-{student_id}")
+# Get the student's first name and ID as input.
+first_name = input("Enter the student's first name: ")
+student_id = input("Enter the student's ID: ")
+
+# Convert the first name to lowercase.
+first_name_lower = first_name.lower()
+
+# Use an f-string to combine the parts and create the email address.
+student_email = f"{first_name_lower}.{student_id}@edify.edu"
+
+print(f"System Generated Email: {student_email}")
+#outputs
+print(student_id)
+print(student_name)
+print(student_email)
