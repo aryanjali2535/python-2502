@@ -1,0 +1,57 @@
+# Enhanced Student Grade Tracker Solution
+print("="*50)
+print("       Enhanced Student Grade Tracker      ")
+print("="*50)
+
+# We start with both ID and Name being invalid
+id_valid = False
+name_valid = False
+
+# The loop will continue as long as EITHER the ID or the Name is not valid.
+# This means it will only exit when both are valid.
+while not id_valid or not name_valid:
+    student_id = input("Enter the student ID:")
+    student_name = input("Enter the student name:")
+    
+    # First, assume both are invalid for this attempt
+    id_valid = False
+    name_valid = False
+    
+    # Check if the student ID is valid
+    # This single check handles all numeric inputs correctly, including negatives.
+    if student_id.isdigit():
+        student_id = int(student_id)
+        if student_id > 0:
+            # If the ID is a positive number, it's valid.
+            id_valid = True
+            # Now, check if the name is valid.
+            if student_name.isalpha():
+                name_valid = True
+                print("Valid ID and Name entered. Thank you.")
+            else:
+                print("Invalid Name: Must contain only alphabets (a-z, A-Z).")
+                # The loop will continue because name_valid is still False.
+        else:
+            print("Invalid ID: Zero not allowed.")
+            # The loop will continue because id_valid is still False.
+    else:
+        # If the ID is not a number, it's invalid.
+        print("Invalid ID: Must be a positive number only.")
+        # The loop will continue because id_valid is still False.
+
+# After the loop, both ID and name are guaranteed to be valid.
+print(f"Student Name: {student_name}")
+print(f"Student ID: {student_id}")
+print(f"System Generated ID: EDIFY-STU-{student_id}")
+
+# Get the student's first name and ID.
+first_name = input("Enter the student's first name: ")
+student_id = input("Enter the student's ID: ")
+
+# Convert the first name to lowercase.
+first_name_lower = first_name.lower()
+
+# Use the + operator to join the strings together.
+student_email = first_name_lower + "." + student_id + "@edify.edu"
+
+print(f"System Generated Email: {student_email}")
