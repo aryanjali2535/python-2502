@@ -903,3 +903,151 @@
 
         -> If we pass any value to the default argument at the function call,
             default value will be overridden with new value passed
+
+29th Sep 2025
+=============
+
+    -> Arbitrary Positional Arguments(*args) 
+
+        -> Allows you to accept any number of Positional Arguments
+
+        -> Used when you don't know how many arguments a function might receive 
+
+    -> Arbitrary Keywords Arguments(**kwargs) 
+
+        -> Allows you to accept any number of Keyword Arguments
+
+        -> Used when you don't know how many arguments a function might receive 
+
+        -> All the arguments we pass will be captured in a Dictionary
+    
+
+    -> "return" is a keyword in python, used in functions to give appropriate response, when a function is called
+
+        -> when you don't use return, by default a function return None 
+
+        -> If we use return, make sure it is the last statement to be executed 
+
+        -> If you have multiple returns sequentially, first will be considered 
+
+        -> If multiple returns are present, and used with control structure, you can control the flow 
+
+
+    -> Function Composition 
+
+        -> Function Calling another function is called Function Composition, for Reusability
+
+    -> Scope Of Variables inside Functions
+
+        -> Scope : Inside the code, where you can access a variable depends up on the Scope
+
+            -> Local Scope 
+
+            -> Global Scope     
+        
+        -> Local Scope
+
+            -> A Local variable is declared inside the function
+            -> its lifetime exists only within the function, while the function runs
+            -> so we cannot use them outside the function   
+            -> NOTE : Parameters we are passing to the functions, are local variables
+
+30th Sep 2025
+=============
+
+    -> Global Scope 
+
+        -> A Global variable is declared outside the function
+        -> its lifetime exists outside the function too
+        -> so we can use them outside the function   
+        -> As global variables can be accessed within the functions, there can be 
+        name conflicts, in this case first preference is given to local variables 
+            NOTE: To access global variables, use globals()
+        -> If you want global variables to be changed inside the function, then we 
+        need to use a special keyword called global 
+
+    -> Function Types In Python
+
+        -> Built in functions
+            -> Predefined functions, already part of standard python library
+            -> no need to explicitly create again using def keyword 
+            -> common utilities are generally predefined functions 
+
+            -> type, len, sum, max, min, dir, id, input etc 
+        
+        -> User Defined functions
+            -> User Defined Functions, are created by developer, using def keyword 
+            -> Custom Functionalities based on user Requirements
+            -> add(), emp_info(), etc 
+        
+        -> Lambda functions (Anonymous Functions)
+
+            -> A lambda function is a small, one line function with no names i.e Anonymous
+
+            -> NOTE: Used ONLY FOR ONE LINE EXPRESSIONS 
+
+            -> We use "lambda" keyword to work with Lambda functions
+
+            -> In lambda functions, result of EXPRESSION is Automatically returned
+
+            -> NOTE : Used for simple and quick tasks, especially when passing a 
+                function as a Parameter
+
+            -> One Liner Functions also called IILE = Immediately Invoked Lambda Expression
+
+            -> Syntax 
+
+                lambda arguments: expression
+
+                    -> arguments can be multiple, but expression is one line only
+
+
+        -> This lambda expressions will be attached with higher functions 
+
+        -> Higher Order Functions 
+
+            -> map, filter and reduce 
+
+1st Oct 2025
+=============
+
+    -> Higher Order Functions 
+
+        -> Their goal is to perform operations on Iterables 
+
+        -> Concise code, without writing explicitly lengthy code for loops 
+
+    -> map()
+
+        -> Applies a function to each item in the Iterable
+
+        -> Just like using a for loop 
+
+        -> Syntax :
+
+            map(function, iterable)
+
+    -> filter()
+
+        -> Filters the items of an iterable, based on condition 
+
+        -> Just like using a for loop with condition 
+
+        -> Syntax :
+
+            filter(function, iterable)
+
+    -> reduce()
+
+        -> Reduces an iterable to Single Value, by applying the function cumulatively 
+
+        -> reduce is available inside a module called functools 
+
+        -> Syntax :
+
+            reduce(function, iterable)
+
+    -> NOTE : Using Lambda Style of Code, we are defining "WHAT TO DO" logic on fly 
+
+    -> data = [100,None,80,70,None]
+       -> filter data without None/null/missing 
