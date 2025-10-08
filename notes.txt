@@ -1051,3 +1051,158 @@
 
     -> data = [100,None,80,70,None]
        -> filter data without None/null/missing 
+
+       6th Oct 2025
+=============
+
+    -> CRUD App using functional style 
+
+    -> Modules 
+
+        -> A module is a simple python file which contain python definitions 
+
+            -> variables 
+            -> statements 
+            -> functions 
+            -> classes 
+            -> etc 
+
+        -> Modules allows you to reuse code, instead of rewriting 
+
+    -> Types Of Modules 
+
+        -> Inbuilt Modules 
+
+            -> Provided as part of standard python library 
+
+        -> User Defined Modules
+
+            -> Created by user itself 
+
+        -> External Modules 
+
+            -> Provided 3rd part vendors 
+
+            -> https://pypi.org/
+
+            -> pip => python package manager 
+
+            -> pip install pandas (win)
+
+            -> pip3 install pandas (mac)
+
+    -> Syntax 
+
+        import module (import whole module and all Functionalities)      
+
+        from module import specific_functionality (import only specific Functionalities) (recommended)
+        
+                
+
+7th Oct 2025
+=============
+
+    -> User Defined Modules
+
+        -> Just writing a python file 
+
+        -> He wants some math functions and also some user profile related info as well 
+
+    -> External Modules 
+
+        -> Rather than developing, we use them 
+
+            -> pip install pandas (win)
+
+            -> pip3 install pandas (mac)
+
+        -> You are working with some API (provided by some external service provider)
+
+        -> pip3 install -r Requirements.txt 
+
+        -> Data Analysis Project : https://github.com/ravi2krishna/fundamentals-student-dashboard-2524.git
+
+    -> Reusability
+
+        -> Block Of Code - functions
+
+        -> A file of Code - modules 
+
+        -> Folder (Multiple files) of code - packages  
+
+            -> package is a logical entity which holds multiple modules (multiple python files)
+
+
+8th Oct 2025
+=============
+
+    -> Package 
+
+        -> A folder with multiple modules (multiple python files)
+
+        -> We need a special file called __init__.py 
+
+            -> __init__.py can be empty no issues, but generally it holds start up msgs / configs etc 
+        
+        -> To work with package use folder name 
+
+    -> File Management With Python 
+
+        -> All above activities/tasks we did in non-persistent storage (RAM)
+
+            -> non-persistent storage (RAM) : temporary 
+
+        -> Now my Requirement is to work with persistent storage (HDD)
+
+           -> persistent storage (HDD) : permanent 
+
+    -> File Operations 
+
+        -> CRUD 
+
+            -> CREATE 
+            -> READ 
+            -> UPDATE 
+            -> DELETE 
+        
+        -> Using Python we can handle all above operations 
+
+            -> To Work with Any Type Of Files python has provided 
+
+                -> open() with modes 
+
+                    -> r - read
+                    -> w - write
+                    -> a - append
+
+        -> Syntax 1 
+
+            -> open("path_file","mode"):
+                statements
+
+            open("file.txt","r")
+
+            -> This way file is not closed after performing operations
+
+        -> Syntax 2 (recommended)
+
+            -> with open("path_file","mode") as alias_name:
+                statements
+
+            with open("file.txt","r") as alias_name:
+
+            -> This way file is Automatically closed after performing operations
+
+    -> Read Data Inside File 
+
+        -> read()
+        -> readline()
+        -> readlines()
+
+    -> Write Data 
+
+        -> Create File 
+        -> Update File 
+        -> in write "w" mode data will be overwritten 
+
+        -> in append "a" mode data will not be overwritten
