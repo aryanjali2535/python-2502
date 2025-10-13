@@ -1263,3 +1263,61 @@
         -> dumps -> object based writing 
 
         -> loads -> object based reading
+
+11th Oct 2025
+=============
+
+    -> Exception Handling 
+
+        -> Exception : It's an Error, which might occur during the program execution 
+
+        -> By default when python encounters an Error, it abruptly STOPS the program execution
+
+        -> To change the above default behavior, and handle the Exceptions by yourself, we need following
+
+            -> try : used to keep the code, that will cause error 
+
+            -> except : used to keep the code that should run, when error occurs 
+
+            -> else : used to keep the code that should run, if no Exceptions were raised in try block
+
+            -> finally : used to keep the code that should run wether an Exception raised or not 
+                       : DB / File Streams -> closing connections will be in finally block
+
+    -> Say we want to define our own Exceptions, then we can use a predefined class called Exception 
+
+    -> In OOPS, we have one principal called Inheritance -> which helps inherit features from another class 
+
+        -> Father -> Child
+
+        -> syntax 
+
+            class UserDefinedException(Exception):
+                pass    
+
+13th Oct 2025
+=============
+
+    -> Data - Python 
+    -> App (Full stack) - Python 
+    -> Scripting (Automation) - Python 
+
+        -> Ansible 
+        -> Terraform 
+
+    -> Boto3 
+
+    -> AWS S3
+
+        -> Amazon S3 (Simple Storage Service) is a highly scalable, durable, and 
+        available object storage service offered by Amazon Web Services (AWS). 
+        
+        -> It allows users to store and retrieve any amount of 
+            data, at any time, from anywhere on the web.
+
+    -> S3 Has 
+
+        -> Buckets - Storage Containers Which Hold Objects (Files)
+
+        -> Objects - Object is the fundamental storage entity in S3 
+                     An Object is nothing but File    
