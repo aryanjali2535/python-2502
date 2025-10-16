@@ -1321,3 +1321,283 @@
 
         -> Objects - Object is the fundamental storage entity in S3 
                      An Object is nothing but File    
+
+14th Oct 2025
+=============
+
+    -> OOP 
+
+        -> OOP, or Object-Oriented Programming, is a programming model that organizes code around "objects" 
+        which are software entities that contain both data (attributes) and the methods(functions) 
+        that operate on that data. 
+        
+        -> Instead of a sequence of functions, OOP focuses on objects interacting with one another, 
+            making code more modular, reusable, and easier to maintain.
+
+        -> Earlier 
+
+            -> Writing Long List Of Instruction (task oriented)
+
+        -> Moving Forward 
+
+            -> Thinking in terms of real world entities (objects)
+
+                -> Object - Data (attributes/variables)
+
+                -> Object - Behavior (methods/functions)
+
+            -> Writing code that follows Object Oriented Design 
+
+                -> Focus is on objects and their relationships, not just functions 
+
+                -> We don't think about steps, we think about "who does what"
+
+        -> Four Pillar Of OOP 
+
+            -> Inheritance 
+
+                -> Using Inheritance We Get Reusability
+
+            -> Encapsulation 
+
+                -> Binding Data & Behavior Together 
+
+            -> Abstraction
+
+                -> Hiding Complexity, and show only what user needs 
+
+            -> Polymorphism
+
+                -> Extensibility, One Entity has multiple forms 
+    
+    
+    ->                      Functional Style                            Object Oriented Style 
+
+    -> Focus                Step by step functions                      Real World Objects 
+
+    -> Data & Function      Separate                                    Combined inside a class 
+
+    -> Code Organization    One Big Script                              Multiple Reuseable Classes 
+
+    -> Reusability          Harder                                      Easy as for Inheritance
+
+    -> Maintenance          Complex as code grows                       More Cleaner 
+
+
+    -> Functional Style Code 
+
+        def student_attend_session(name):
+            print(f"{name} attended session")
+
+
+    -> Object Oriented Style Code
+
+        def __init__(self,name):
+            self.name = name 
+
+        def attend_session(self):
+            print(f"{self.name} attended session")
+
+
+    -> Classes 
+
+    -> Objects 
+
+    -> Methods 
+
+    -> Instance Members 
+
+    -> Class Members 
+
+    -> OOP Principals
+
+15th Oct 2025
+=============
+
+    -> Object 
+
+        -> In terms of real world, everything is an object 
+
+        -> An object has two entities 
+
+            -> An Object has something like Characteristics / Properties (DATA) 
+                Variables (Attributes) - CAR 
+
+                -> CAR has a brand 
+                -> CAR has a price
+                -> CAR has a color etc
+
+            -> An Object does something like Behavior (FUNCTIONS) 
+                METHODS - CAR 
+
+                -> CAR does drive forward
+                -> CAR does drive backward
+                -> CAR does sound horn
+                -> CAR does blink indicators etc 
+
+            -> How to create an object ?
+
+                -> We need Class 
+
+    -> Class 
+
+        -> A class is a blueprint for creating objects 
+
+        -> A class will define what Characteristics and Behaviors, an object should posses
+
+    -> Object 
+
+        -> An Object is an actual / real instance of a class 
+
+
+    -> Classes & Objects 
+
+        -> Syntax for class 
+
+            class ClassName:
+                statements 
+
+        -> Syntax for object 
+
+            object = ClassName()
+
+        -> NOTE : In python classes will be Automatically called, unlike functions 
+
+        -> Class call is not required 
+            
+
+    -> Methods 
+
+        -> Methods are like functions, which are associated with objects 
+
+            -> A Method is block of Code, which performs a task (associated with objects )
+
+        -> Method will be inside the class 
+
+        
+        ->                            Functions                              Methods
+
+        How To Call                   function_name(args)                    object.method_name(args)
+
+        Belongs To                    independent / global                   Object 
+
+        Defined Using                 def function_name                      def method_name(inside class)
+
+    -> When working with OOP Style, one of the Confusion initially is 
+
+        -> Python Automatically Passes an object(self) to method 
+
+        -> self is nothing but object reference 
+
+        -> self is recommended by python, but you can pass anything as reference 
+            
+    -> __init__ 
+
+        -> __init__() is a special methods (also called as Constructor) 
+
+        -> Constructors are used to initialize the data 
+
+        -> When we create an object Constructors are Automatically called 
+
+
+16th Oct 2025
+=============
+
+    -> Instance Members => Instance Variables & Instance Methods 
+
+    -> Instance Variables / Attributes 
+
+        -> Instance Variables belongs to an object i.e instance, not the class 
+
+        -> Instance Variables are defined in the __init__ method using self keyword 
+
+        -> Each Object you create has it's own copy of instance variable with different values 
+
+        -> Modifying an instance variable in one object, doesn't affect the same variable
+            in other objects 
+
+        -> Accessed via self.variable_name
+
+        -> syntax
+
+            class Demo:
+                def __init__(self,value):
+                    self.instance_var = value 
+
+
+    -> Instance Methods 
+
+        -> Methods which are defined inside a class which 
+            operates on instance variables i,e operate on object
+
+        -> Instance Methods are very commonly used types of methods in OOP 
+
+        -> Instance Methods always take "self" as the first parameter 
+
+        -> Instance Methods can access instance variables and also class variables too 
+
+        -> Called using object_name.method()
+
+    
+    -> Class Variables 
+
+        -> Class Variables are shared across all the instances of class 
+            i.e shared by all the objects of the class 
+
+        -> Class Variables belong to class, rather than objects, ideal for  
+            storing data that is common/fixed for all objects 
+
+        -> Defined inside the class, but outside the methods 
+
+        -> Accessed using Classname.variable_name or object.variable_name 
+
+            -> recommended is using Classname.variable_name
+
+        -> NOTE : If Class Variables are changed, the change is reflected in all the instances unlike instance vars 
+
+        -> Class Variables are memory efficient as only one copy is there unlike multiple copies like objects 
+
+        -> syntax
+
+            class Demo:
+                class_var = "i'm shared data"
+        
+    -> Class Methods 
+
+        -> Methods inside the class, which operates on class variables 
+
+        -> Not very commonly used 
+
+        -> Class Methods take "cls" as the first parameter 
+
+        -> Class Methods are defined using @classmethod decorator 
+
+        -> Can be accessed using Class Name or object, recommended is Classname 
+
+        -> Accessing instance data inside a class method gives error 
+
+    -> Static Members 
+
+        -> In python we don't have Static Variables 
+
+            -> In other languages like java static variable is equivalent to Class Variable 
+
+            -> Static Variable == Class Variable
+
+        -> Static Methods 
+
+            -> Static Methods are not bound to either class or object 
+
+            -> Static Methods does not depend on instance variable or class variable 
+
+            -> Not a common method 
+
+            -> Don't take self or cls as first parameter 
+
+            -> NOTE : Behaves like a normal function, but inside a class  
+
+            -> Declared used @staticmethod 
+
+            -> Used as utilities / helper functions 
+
+            -> Can be classed using both i,e class and object also 
