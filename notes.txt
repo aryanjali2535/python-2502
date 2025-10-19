@@ -303,7 +303,7 @@
 
         -> Syntax : we use {}, with f as (formatted string literals)  
 
-    -> Manipulate Data
+    -> Manipulate Data To manipulate data in Python programs we need operators. 
 
 -> Operators 
 
@@ -364,7 +364,7 @@
 
                 -> not in : return True, if sequence is not present
 
-        -> Identity Operators
+        -> Identity Operators   
 
             -> Used to Compare (memory address)
 
@@ -612,7 +612,7 @@
 
     -> In python(part of standard library) we use following classes to work with Complex Data types
 
-        -> List 
+        -> List (How We use it Application)
         -> Tuple 
         -> Dictionary
         -> Set 
@@ -650,7 +650,9 @@
         -> Duplicates Allowed 
 
         -> List Methods / operations
-        22nd Sep 2025
+
+
+22nd Sep 2025
 =============
 
     -> List Methods Continued 
@@ -713,6 +715,8 @@
         -> Duplicates : Allowed 
 
         -> Can we hold different data types : Yes 
+
+
 23rd Sep 2025
 =============
 
@@ -808,6 +812,8 @@
         -> Set (Unique Dat) {in which context}
 
 -> Databases (CRUD) : Database point of view 
+
+
 
 25th Sep 2025
 =============
@@ -1052,7 +1058,7 @@
     -> data = [100,None,80,70,None]
        -> filter data without None/null/missing 
 
-       6th Oct 2025
+6th Oct 2025
 =============
 
     -> CRUD App using functional style 
@@ -1205,7 +1211,7 @@
         -> Update File 
         -> in write "w" mode data will be overwritten 
 
-        -> in append "a" mode data will not be overwritten
+        -> in append "a" mode data will not be overwritten 
 
 9th Oct 2025
 =============
@@ -1264,6 +1270,7 @@
 
         -> loads -> object based reading
 
+
 11th Oct 2025
 =============
 
@@ -1321,6 +1328,7 @@
 
         -> Objects - Object is the fundamental storage entity in S3 
                      An Object is nothing but File    
+
 
 14th Oct 2025
 =============
